@@ -5,4 +5,3 @@ nodes:
     extraMounts:
       - hostPath: /tmp/kind_storage
         containerPath: /data
-

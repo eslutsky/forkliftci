@@ -1,7 +1,12 @@
 #!/bin/sh
 
+kubectl apply -f ovirt/patch.yml
+
 docker build ovirt/ -t localhost:5001/fakeovirt
 docker push localhost:5001/fakeovirt
+
+docker build ovirt-imageio/ -t localhost:5001/imageio
+docker push localhost:5001/imageio
 
 kubectl apply -f ovirt/fakeovirt_deployment.yml
 while ! kubectl get deployment -n konveyor-forklift fakeovirt; do sleep 10; done
