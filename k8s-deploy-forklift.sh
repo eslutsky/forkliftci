@@ -11,7 +11,7 @@ while ! kubectl get deployment -n olm olm-operator; do sleep 10; done
 kubectl wait deployment -n olm olm-operator --for condition=Available=True --timeout=180s
 
 # Install forklift-operator
-export FORK_RELEASE=$(curl -s https://api.github.com/repos/konveyor/forklift-operator/branches | jq ". | last .name" | tr -d '"')
+export FORK_RELEASE=$(curl -L -s https://api.github.com/repos/konveyor/forklift-operator/branches | jq ". | last .name" | tr -d '"')
 kubectl apply -f https://raw.githubusercontent.com/konveyor/forklift-operator/${FORK_RELEASE}/forklift-k8s.yaml
 
 # --------------------
