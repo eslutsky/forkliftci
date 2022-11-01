@@ -1,385 +1,82 @@
 {
-  "disk" : [ {
-    "actual_size" : "4096",
-    "alias" : "OVF_STORE",
-    "backup" : "none",
-    "content_type" : "ovf_store",
-    "format" : "raw",
-    "image_id" : "a6acacea-bfeb-4b85-8acb-aa8b97eb2ad3",
-    "propagate_errors" : "false",
-    "provisioned_size" : "14336",
-    "shareable" : "true",
-    "sparse" : "true",
-    "status" : "ok",
-    "storage_type" : "image",
-    "wipe_after_delete" : "false",
-    "disk_profile" : {
-      "href" : "/ovirt-engine/api/diskprofiles/0f9c5266-0192-4127-897f-b297cf6c8e04",
-      "id" : "0f9c5266-0192-4127-897f-b297cf6c8e04"
-    },
-    "quota" : {
-      "href" : "/ovirt-engine/api/datacenters/32ebd239-25a2-4a13-b514-5bf7c8de6878/quotas/712172d4-dc8e-4989-8a20-578506088116",
-      "id" : "712172d4-dc8e-4989-8a20-578506088116"
-    },
-    "storage_domains" : {
-      "storage_domain" : [ {
-        "href" : "/ovirt-engine/api/storagedomains/95ef6fee-5773-46a2-9340-a636958a96b8",
-        "id" : "95ef6fee-5773-46a2-9340-a636958a96b8"
-      } ]
-    },
-    "actions" : {
-      "link" : [ {
-        "href" : "/ovirt-engine/api/disks/737b09a5-7f9e-47ec-85f3-b39bc163a530/reduce",
-        "rel" : "reduce"
-      }, {
-        "href" : "/ovirt-engine/api/disks/737b09a5-7f9e-47ec-85f3-b39bc163a530/sparsify",
-        "rel" : "sparsify"
-      }, {
-        "href" : "/ovirt-engine/api/disks/737b09a5-7f9e-47ec-85f3-b39bc163a530/copy",
-        "rel" : "copy"
-      }, {
-        "href" : "/ovirt-engine/api/disks/737b09a5-7f9e-47ec-85f3-b39bc163a530/export",
-        "rel" : "export"
-      }, {
-        "href" : "/ovirt-engine/api/disks/737b09a5-7f9e-47ec-85f3-b39bc163a530/move",
-        "rel" : "move"
-      }, {
-        "href" : "/ovirt-engine/api/disks/737b09a5-7f9e-47ec-85f3-b39bc163a530/refreshlun",
-        "rel" : "refreshlun"
-      } ]
-    },
-    "name" : "OVF_STORE",
-    "description" : "OVF_STORE",
-    "href" : "/ovirt-engine/api/disks/737b09a5-7f9e-47ec-85f3-b39bc163a530",
-    "id" : "737b09a5-7f9e-47ec-85f3-b39bc163a530",
-    "link" : [ {
-      "href" : "/ovirt-engine/api/disks/737b09a5-7f9e-47ec-85f3-b39bc163a530/permissions",
-      "rel" : "permissions"
-    }, {
-      "href" : "/ovirt-engine/api/disks/737b09a5-7f9e-47ec-85f3-b39bc163a530/disksnapshots",
-      "rel" : "disksnapshots"
-    }, {
-      "href" : "/ovirt-engine/api/disks/737b09a5-7f9e-47ec-85f3-b39bc163a530/statistics",
-      "rel" : "statistics"
-    } ]
-  }, {
-    "actual_size" : "4096",
-    "alias" : "OVF_STORE",
-    "backup" : "none",
-    "content_type" : "ovf_store",
-    "format" : "raw",
-    "image_id" : "3d4a12d7-a85a-4d4e-b0e7-7a3202cfc2c2",
-    "propagate_errors" : "false",
-    "provisioned_size" : "14336",
-    "shareable" : "true",
-    "sparse" : "true",
-    "status" : "ok",
-    "storage_type" : "image",
-    "wipe_after_delete" : "false",
-    "disk_profile" : {
-      "href" : "/ovirt-engine/api/diskprofiles/0f9c5266-0192-4127-897f-b297cf6c8e04",
-      "id" : "0f9c5266-0192-4127-897f-b297cf6c8e04"
-    },
-    "quota" : {
-      "href" : "/ovirt-engine/api/datacenters/32ebd239-25a2-4a13-b514-5bf7c8de6878/quotas/712172d4-dc8e-4989-8a20-578506088116",
-      "id" : "712172d4-dc8e-4989-8a20-578506088116"
-    },
-    "storage_domains" : {
-      "storage_domain" : [ {
-        "href" : "/ovirt-engine/api/storagedomains/95ef6fee-5773-46a2-9340-a636958a96b8",
-        "id" : "95ef6fee-5773-46a2-9340-a636958a96b8"
-      } ]
-    },
-    "actions" : {
-      "link" : [ {
-        "href" : "/ovirt-engine/api/disks/2837e27e-9cd3-4cdb-b2c8-8a7fbd08612a/reduce",
-        "rel" : "reduce"
-      }, {
-        "href" : "/ovirt-engine/api/disks/2837e27e-9cd3-4cdb-b2c8-8a7fbd08612a/sparsify",
-        "rel" : "sparsify"
-      }, {
-        "href" : "/ovirt-engine/api/disks/2837e27e-9cd3-4cdb-b2c8-8a7fbd08612a/copy",
-        "rel" : "copy"
-      }, {
-        "href" : "/ovirt-engine/api/disks/2837e27e-9cd3-4cdb-b2c8-8a7fbd08612a/export",
-        "rel" : "export"
-      }, {
-        "href" : "/ovirt-engine/api/disks/2837e27e-9cd3-4cdb-b2c8-8a7fbd08612a/move",
-        "rel" : "move"
-      }, {
-        "href" : "/ovirt-engine/api/disks/2837e27e-9cd3-4cdb-b2c8-8a7fbd08612a/refreshlun",
-        "rel" : "refreshlun"
-      } ]
-    },
-    "name" : "OVF_STORE",
-    "description" : "OVF_STORE",
-    "href" : "/ovirt-engine/api/disks/2837e27e-9cd3-4cdb-b2c8-8a7fbd08612a",
-    "id" : "2837e27e-9cd3-4cdb-b2c8-8a7fbd08612a",
-    "link" : [ {
-      "href" : "/ovirt-engine/api/disks/2837e27e-9cd3-4cdb-b2c8-8a7fbd08612a/permissions",
-      "rel" : "permissions"
-    }, {
-      "href" : "/ovirt-engine/api/disks/2837e27e-9cd3-4cdb-b2c8-8a7fbd08612a/disksnapshots",
-      "rel" : "disksnapshots"
-    }, {
-      "href" : "/ovirt-engine/api/disks/2837e27e-9cd3-4cdb-b2c8-8a7fbd08612a/statistics",
-      "rel" : "statistics"
-    } ]
-  }, {
-    "actual_size" : "4096",
-    "alias" : "test",
-    "backup" : "none",
-    "content_type" : "data",
-    "format" : "raw",
-    "image_id" : "fda31e9b-580d-4d2f-9650-2171c2a8196e",
-    "propagate_errors" : "false",
-    "provisioned_size" : "1073741824",
-    "shareable" : "false",
-    "sparse" : "true",
-    "status" : "ok",
-    "storage_type" : "image",
-    "total_size" : "4096",
-    "wipe_after_delete" : "false",
-    "disk_profile" : {
-      "href" : "/ovirt-engine/api/diskprofiles/0f9c5266-0192-4127-897f-b297cf6c8e04",
-      "id" : "0f9c5266-0192-4127-897f-b297cf6c8e04"
-    },
-    "quota" : {
-      "href" : "/ovirt-engine/api/datacenters/32ebd239-25a2-4a13-b514-5bf7c8de6878/quotas/712172d4-dc8e-4989-8a20-578506088116",
-      "id" : "712172d4-dc8e-4989-8a20-578506088116"
-    },
-    "storage_domains" : {
-      "storage_domain" : [ {
-        "href" : "/ovirt-engine/api/storagedomains/95ef6fee-5773-46a2-9340-a636958a96b8",
-        "id" : "95ef6fee-5773-46a2-9340-a636958a96b8"
-      } ]
-    },
-    "actions" : {
-      "link" : [ {
-        "href" : "/ovirt-engine/api/disks/f56564ed-ca74-4d96-9ec6-4b3999a8d93d/reduce",
-        "rel" : "reduce"
-      }, {
-        "href" : "/ovirt-engine/api/disks/f56564ed-ca74-4d96-9ec6-4b3999a8d93d/sparsify",
-        "rel" : "sparsify"
-      }, {
-        "href" : "/ovirt-engine/api/disks/f56564ed-ca74-4d96-9ec6-4b3999a8d93d/copy",
-        "rel" : "copy"
-      }, {
-        "href" : "/ovirt-engine/api/disks/f56564ed-ca74-4d96-9ec6-4b3999a8d93d/export",
-        "rel" : "export"
-      }, {
-        "href" : "/ovirt-engine/api/disks/f56564ed-ca74-4d96-9ec6-4b3999a8d93d/move",
-        "rel" : "move"
-      }, {
-        "href" : "/ovirt-engine/api/disks/f56564ed-ca74-4d96-9ec6-4b3999a8d93d/refreshlun",
-        "rel" : "refreshlun"
-      } ]
-    },
-    "name" : "test",
-    "description" : "",
-    "href" : "/ovirt-engine/api/disks/f56564ed-ca74-4d96-9ec6-4b3999a8d93d",
-    "id" : "f56564ed-ca74-4d96-9ec6-4b3999a8d93d",
-    "link" : [ {
-      "href" : "/ovirt-engine/api/disks/f56564ed-ca74-4d96-9ec6-4b3999a8d93d/permissions",
-      "rel" : "permissions"
-    }, {
-      "href" : "/ovirt-engine/api/disks/f56564ed-ca74-4d96-9ec6-4b3999a8d93d/disksnapshots",
-      "rel" : "disksnapshots"
-    }, {
-      "href" : "/ovirt-engine/api/disks/f56564ed-ca74-4d96-9ec6-4b3999a8d93d/statistics",
-      "rel" : "statistics"
-    } ]
-  }, {
-    "actual_size" : "1020264448",
-    "alias" : "CentOS-7-x86_64-Minimal-2009.iso",
-    "backup" : "none",
-    "content_type" : "iso",
-    "format" : "raw",
-    "image_id" : "6d7f1cae-286b-4727-8661-4c2c33d518ae",
-    "propagate_errors" : "false",
-    "provisioned_size" : "1020264448",
-    "shareable" : "false",
-    "sparse" : "true",
-    "status" : "ok",
-    "storage_type" : "image",
-    "total_size" : "1020264448",
-    "wipe_after_delete" : "false",
-    "disk_profile" : {
-      "href" : "/ovirt-engine/api/diskprofiles/0f9c5266-0192-4127-897f-b297cf6c8e04",
-      "id" : "0f9c5266-0192-4127-897f-b297cf6c8e04"
-    },
-    "quota" : {
-      "href" : "/ovirt-engine/api/datacenters/32ebd239-25a2-4a13-b514-5bf7c8de6878/quotas/712172d4-dc8e-4989-8a20-578506088116",
-      "id" : "712172d4-dc8e-4989-8a20-578506088116"
-    },
-    "storage_domains" : {
-      "storage_domain" : [ {
-        "href" : "/ovirt-engine/api/storagedomains/95ef6fee-5773-46a2-9340-a636958a96b8",
-        "id" : "95ef6fee-5773-46a2-9340-a636958a96b8"
-      } ]
-    },
-    "actions" : {
-      "link" : [ {
-        "href" : "/ovirt-engine/api/disks/a3baf378-11e7-4df4-b726-d4265cf343f3/reduce",
-        "rel" : "reduce"
-      }, {
-        "href" : "/ovirt-engine/api/disks/a3baf378-11e7-4df4-b726-d4265cf343f3/sparsify",
-        "rel" : "sparsify"
-      }, {
-        "href" : "/ovirt-engine/api/disks/a3baf378-11e7-4df4-b726-d4265cf343f3/copy",
-        "rel" : "copy"
-      }, {
-        "href" : "/ovirt-engine/api/disks/a3baf378-11e7-4df4-b726-d4265cf343f3/export",
-        "rel" : "export"
-      }, {
-        "href" : "/ovirt-engine/api/disks/a3baf378-11e7-4df4-b726-d4265cf343f3/move",
-        "rel" : "move"
-      }, {
-        "href" : "/ovirt-engine/api/disks/a3baf378-11e7-4df4-b726-d4265cf343f3/refreshlun",
-        "rel" : "refreshlun"
-      } ]
-    },
-    "name" : "CentOS-7-x86_64-Minimal-2009.iso",
-    "description" : "CentOS-7-x86_64-Minimal-2009.iso",
-    "href" : "/ovirt-engine/api/disks/a3baf378-11e7-4df4-b726-d4265cf343f3",
-    "id" : "a3baf378-11e7-4df4-b726-d4265cf343f3",
-    "link" : [ {
-      "href" : "/ovirt-engine/api/disks/a3baf378-11e7-4df4-b726-d4265cf343f3/permissions",
-      "rel" : "permissions"
-    }, {
-      "href" : "/ovirt-engine/api/disks/a3baf378-11e7-4df4-b726-d4265cf343f3/disksnapshots",
-      "rel" : "disksnapshots"
-    }, {
-      "href" : "/ovirt-engine/api/disks/a3baf378-11e7-4df4-b726-d4265cf343f3/statistics",
-      "rel" : "statistics"
-    } ]
-  }, {
-    "actual_size" : "4096",
-    "alias" : "test123",
-    "backup" : "none",
-    "content_type" : "data",
-    "format" : "raw",
-    "image_id" : "3b506062-d062-461c-ad51-7daceed9e1b5",
-    "propagate_errors" : "false",
-    "provisioned_size" : "1073741824",
-    "shareable" : "false",
-    "sparse" : "true",
-    "status" : "ok",
-    "storage_type" : "image",
-    "total_size" : "4096",
-    "wipe_after_delete" : "false",
-    "disk_profile" : {
-      "href" : "/ovirt-engine/api/diskprofiles/0f9c5266-0192-4127-897f-b297cf6c8e04",
-      "id" : "0f9c5266-0192-4127-897f-b297cf6c8e04"
-    },
-    "quota" : {
-      "href" : "/ovirt-engine/api/datacenters/32ebd239-25a2-4a13-b514-5bf7c8de6878/quotas/712172d4-dc8e-4989-8a20-578506088116",
-      "id" : "712172d4-dc8e-4989-8a20-578506088116"
-    },
-    "storage_domains" : {
-      "storage_domain" : [ {
-        "href" : "/ovirt-engine/api/storagedomains/95ef6fee-5773-46a2-9340-a636958a96b8",
-        "id" : "95ef6fee-5773-46a2-9340-a636958a96b8"
-      } ]
-    },
-    "actions" : {
-      "link" : [ {
-        "href" : "/ovirt-engine/api/disks/95158d8b-8105-4287-976b-3c124d7cf393/reduce",
-        "rel" : "reduce"
-      }, {
-        "href" : "/ovirt-engine/api/disks/95158d8b-8105-4287-976b-3c124d7cf393/sparsify",
-        "rel" : "sparsify"
-      }, {
-        "href" : "/ovirt-engine/api/disks/95158d8b-8105-4287-976b-3c124d7cf393/copy",
-        "rel" : "copy"
-      }, {
-        "href" : "/ovirt-engine/api/disks/95158d8b-8105-4287-976b-3c124d7cf393/export",
-        "rel" : "export"
-      }, {
-        "href" : "/ovirt-engine/api/disks/95158d8b-8105-4287-976b-3c124d7cf393/move",
-        "rel" : "move"
-      }, {
-        "href" : "/ovirt-engine/api/disks/95158d8b-8105-4287-976b-3c124d7cf393/refreshlun",
-        "rel" : "refreshlun"
-      } ]
-    },
-    "name" : "test123",
-    "description" : "",
-    "href" : "/ovirt-engine/api/disks/95158d8b-8105-4287-976b-3c124d7cf393",
-    "id" : "95158d8b-8105-4287-976b-3c124d7cf393",
-    "link" : [ {
-      "href" : "/ovirt-engine/api/disks/95158d8b-8105-4287-976b-3c124d7cf393/permissions",
-      "rel" : "permissions"
-    }, {
-      "href" : "/ovirt-engine/api/disks/95158d8b-8105-4287-976b-3c124d7cf393/disksnapshots",
-      "rel" : "disksnapshots"
-    }, {
-      "href" : "/ovirt-engine/api/disks/95158d8b-8105-4287-976b-3c124d7cf393/statistics",
-      "rel" : "statistics"
-    } ]
-  }, {
-    "actual_size" : "1723117568",
-    "alias" : "test_Disk1",
-    "backup" : "none",
-    "content_type" : "data",
-    "format" : "raw",
-    "image_id" : "85752c17-d73f-428a-be2e-404b95afdad5",
-    "propagate_errors" : "false",
-    "provisioned_size" : "8589934592",
-    "shareable" : "false",
-    "sparse" : "true",
-    "status" : "ok",
-    "storage_type" : "image",
-    "total_size" : "1723117568",
-    "wipe_after_delete" : "false",
-    "disk_profile" : {
-      "href" : "/ovirt-engine/api/diskprofiles/0f9c5266-0192-4127-897f-b297cf6c8e04",
-      "id" : "0f9c5266-0192-4127-897f-b297cf6c8e04"
-    },
-    "quota" : {
-      "href" : "/ovirt-engine/api/datacenters/32ebd239-25a2-4a13-b514-5bf7c8de6878/quotas/712172d4-dc8e-4989-8a20-578506088116",
-      "id" : "712172d4-dc8e-4989-8a20-578506088116"
-    },
-    "storage_domains" : {
-      "storage_domain" : [ {
-        "href" : "/ovirt-engine/api/storagedomains/95ef6fee-5773-46a2-9340-a636958a96b8",
-        "id" : "95ef6fee-5773-46a2-9340-a636958a96b8"
-      } ]
-    },
-    "actions" : {
-      "link" : [ {
-        "href" : "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/reduce",
-        "rel" : "reduce"
-      }, {
-        "href" : "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/sparsify",
-        "rel" : "sparsify"
-      }, {
-        "href" : "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/copy",
-        "rel" : "copy"
-      }, {
-        "href" : "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/export",
-        "rel" : "export"
-      }, {
-        "href" : "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/move",
-        "rel" : "move"
-      }, {
-        "href" : "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/refreshlun",
-        "rel" : "refreshlun"
-      } ]
-    },
-    "name" : "test_Disk1",
-    "description" : "",
-    "href" : "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7",
-    "id" : "b5a7f7f6-377b-467b-850f-a0dcd43ac5d7",
-    "link" : [ {
-      "href" : "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/permissions",
-      "rel" : "permissions"
-    }, {
-      "href" : "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/disksnapshots",
-      "rel" : "disksnapshots"
-    }, {
-      "href" : "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/statistics",
-      "rel" : "statistics"
-    } ]
-  } ]
+  "disk": [
+    {
+      "actual_size": "46137344",
+      "alias": "cirros",
+      "backup": "none",
+      "content_type": "data",
+      "format": "raw",
+      "image_id": "85752c17-d73f-428a-be2e-404b95afdad5",
+      "propagate_errors": "false",
+      "provisioned_size": "46137344",
+      "shareable": "false",
+      "sparse": "true",
+      "status": "ok",
+      "storage_type": "image",
+      "total_size": "46137344",
+      "wipe_after_delete": "false",
+      "disk_profile": {
+        "href": "/ovirt-engine/api/diskprofiles/0f9c5266-0192-4127-897f-b297cf6c8e04",
+        "id": "0f9c5266-0192-4127-897f-b297cf6c8e04"
+      },
+      "quota": {
+        "href": "/ovirt-engine/api/datacenters/32ebd239-25a2-4a13-b514-5bf7c8de6878/quotas/712172d4-dc8e-4989-8a20-578506088116",
+        "id": "712172d4-dc8e-4989-8a20-578506088116"
+      },
+      "storage_domains": {
+        "storage_domain": [
+          {
+            "href": "/ovirt-engine/api/storagedomains/95ef6fee-5773-46a2-9340-a636958a96b8",
+            "id": "95ef6fee-5773-46a2-9340-a636958a96b8"
+          }
+        ]
+      },
+      "actions": {
+        "link": [
+          {
+            "href": "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/reduce",
+            "rel": "reduce"
+          },
+          {
+            "href": "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/sparsify",
+            "rel": "sparsify"
+          },
+          {
+            "href": "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/copy",
+            "rel": "copy"
+          },
+          {
+            "href": "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/export",
+            "rel": "export"
+          },
+          {
+            "href": "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/move",
+            "rel": "move"
+          },
+          {
+            "href": "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/refreshlun",
+            "rel": "refreshlun"
+          }
+        ]
+      },
+      "name": "cirros",
+      "description": "",
+      "href": "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7",
+      "id": "b5a7f7f6-377b-467b-850f-a0dcd43ac5d7",
+      "link": [
+        {
+          "href": "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/permissions",
+          "rel": "permissions"
+        },
+        {
+          "href": "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/disksnapshots",
+          "rel": "disksnapshots"
+        },
+        {
+          "href": "/ovirt-engine/api/disks/b5a7f7f6-377b-467b-850f-a0dcd43ac5d7/statistics",
+          "rel": "statistics"
+        }
+      ]
+    }
+  ]
 }

@@ -45,7 +45,11 @@ jobs:
 
       - run: kubectl get pods -n konveyor-forklift
 
-      - run: kubectl get providers -n konveyor-forklift
+      - run: sleep 60; kubectl get providers -n konveyor-forklift -o yaml
+
+      - run: kubectl get migrations -n konveyor-forklift -o yaml
+
+      - run: kubectl get plans -n konveyor-forklift -o yaml
 
       - run: echo "CLUSTER=`kind get kubeconfig | grep server | cut -d ' ' -f6`" >> $GITHUB_ENV
       - run: echo "TOKEN=`kubectl get secrets -n kube-system -o jsonpath='{.items[0].data.token-id}' | base64 -d`.`kubectl get secrets -n kube-system -o jsonpath='{.items[0].data.token-secret}' | base64 -d`" >> $GITHUB_ENV 
