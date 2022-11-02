@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: imageio
+  namespace: konveyor-forklift
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: imageio
+  template:
+    metadata:
+      labels:
+        app: imageio
+    spec:
+      containers:
+      - name: imageio
+        image: localhost:5001/imageio:latest
+        ports:
+        - containerPort: 80
+        command: ["/app/entrypoint.py", "/images/cirros.raw", "--ticket-id", "cirros"]
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: imageio
+  namespace: konveyor-forklift
+spec:
+  selector:
+    app: imageio
+  type: ClusterIP
+  ports:
+  - name: imageio
+    port: 12345
+    targetPort: 80

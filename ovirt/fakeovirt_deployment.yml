@@ -24,16 +24,7 @@ spec:
             value: konveyor-forklift
           - name: PORT
             value: "12346"
-      - name: imageio
-        image: localhost:5001/imageio:latest
-        ports:
-        - containerPort: 12345
-        command: ["/bin/bash"]
-        args:
-        - -c
-        - ovirt-imageio& sleep 15 && 
-          ovirt-imageioctl add-ticket myticket.json &&
-          tail -n+1 -f /var/log/ovirt-imageio/daemon.log
+
 ---
 apiVersion: v1
 kind: Service
@@ -48,6 +39,3 @@ spec:
   - name: fakeovirt
     port: 12346
     targetPort: 12346
-  - name: imageio
-    port: 12345
-    targetPort: 12345
