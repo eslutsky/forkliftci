@@ -19,7 +19,7 @@ the UI, because it is meant to be the target for running automated tests.
 * [docker](https://www.docker.com/) or [podman](https://podman.io/)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/)
 * [git](https://git-scm.com/)
-
+* gcc with glibc-static package installed
 
 # All in one script
 
