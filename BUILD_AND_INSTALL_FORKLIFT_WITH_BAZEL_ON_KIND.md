@@ -58,17 +58,6 @@ Run the script [get_forklift_bazel.sh](get_forklift_bazel.sh) to clone the
 github repository.
 
 
-# Patch for local registry
-
-In order to support our local docker registry (instead of quay.io) the
-.bazelrc file needs to be patched. To do this run the script
-[patch_for_local_registry_bazel.sh](patch_for_local_registry_bazel.sh) in
-the same directory where the forklift repository was checked out.  
-*Warning:* the patch matches the state of the forklift repository on
-2022-09-21. It might become obsolete if the files which need patching are
-updated.
-
-
 # Build the docker images and push them to the local registry
 
 Run the script [build_forklift_bazel.sh](build_forklift_bazel.sh).
