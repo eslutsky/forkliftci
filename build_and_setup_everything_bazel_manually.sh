@@ -18,3 +18,4 @@
 
 echo "CLUSTER=$CLUSTER"
 echo "TOKEN=$TOKEN"
+echo "NODE_IP=$NODE_IP"

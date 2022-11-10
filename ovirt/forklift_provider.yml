@@ -27,4 +27,4 @@ spec:
     name: ovirt-provider-secret
     namespace: konveyor-forklift
   type: ovirt
-  url: https://fakeovirt.konveyor-forklift:12346/ovirt-engine/api
+  url: https://fakeovirt.konveyor-forklift:30001/ovirt-engine/api

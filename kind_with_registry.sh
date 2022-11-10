@@ -59,3 +59,4 @@ EOF
 kubectl apply -f add_pv.yml
 
 export CLUSTER=`kind get kubeconfig | grep server | cut -d ' ' -f6`
+export NODE_IP=`kubectl get nodes -o wide | grep control-plane | awk '{print $6}'`
