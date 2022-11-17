@@ -25,5 +25,9 @@ jobs:
 
       options: --cpus 2
     steps:
+      - name: checkout 
+        uses: actions/checkout@v3
+        with:
+          path: main
       - name: run the test
-        run: find /
+        run: pwd && find main/
