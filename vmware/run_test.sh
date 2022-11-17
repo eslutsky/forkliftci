@@ -1,3 +1,6 @@
+#cleanup
+kill -9 $(cat /tmp/nbd2.pid)
+rm -rf /tmp/nbd2.sock
 
 
 uri="nbd+unix:///?socket=/tmp/nbd2.sock"
@@ -6,6 +9,3 @@ nbdkit --foreground --readonly --exit-with-parent -U /tmp/nbd2.sock --pidfile /t
 sleep 2
 nbdinfo --size $uri
 
-#cleanup
-kill -9 $(cat /tmp/nbd2.pid)
-rm -rf /tmp/nbd2.sock

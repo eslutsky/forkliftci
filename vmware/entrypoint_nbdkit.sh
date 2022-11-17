@@ -4,7 +4,7 @@ set -x
 
 mkfifo /tmp/vcfifo
 
-/usr/bin/vcsim -l :443 -E /tmp/vcfifo -dc 0 -trace -api-version 7.0 &
+/usr/bin/vcsim -l :443 -E /tmp/vcfifo -dc 0 -trace -api-version 6.5 &
 eval "$(cat /tmp/vcfifo)"
 
 export GOVC_INSECURE=1
@@ -16,7 +16,9 @@ mkdir -p $TESTSTORE
 /usr/bin/govc cluster.add -hostname testhost -username user -password pass -noverify
 /usr/bin/govc datastore.create -type local -name teststore -path $TESTSTORE testcluster/*
 
-/usr/bin/govc vm.create -disk 10M  testvm 
+/usr/bin/govc vm.create -disk 10M -on=false  testvm 
+#/usr/bin/govc vm.markastemplate testvm 
+
 while read line; do
     if [[ $line =~ (^[\s]*UUID:[\s]*)(.*)$ ]]; then
         uuid="${BASH_REMATCH[2]}"
@@ -33,17 +35,5 @@ while read line; do
     fi
 done < <(govc device.info -vm testvm)
 
-/usr/bin/govc snapshot.create -vm testvm Snapshot-1
-/usr/bin/govc snapshot.create -vm testvm Snapshot-2
-while read line; do
-    if [[ $line =~ \[(.*?)\].*Snapshot-1 ]]; then
-        snapshot1="${BASH_REMATCH[1]}"
-        echo $snapshot1 > /tmp/vmsnapshot1
-    fi
-    if [[ $line =~ \[(.*?)\].*Snapshot-2 ]]; then
-        snapshot2="${BASH_REMATCH[1]}"
-        echo $snapshot2 > /tmp/vmsnapshot2
-    fi
-done < <(govc snapshot.tree -vm testvm -i)
-
-fg
+bash /run_test.sh
+echo DONE

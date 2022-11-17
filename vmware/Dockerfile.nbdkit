@@ -1,0 +1,9 @@
+FROM quay.io/eslutsky/vcsim_debug:latest
+
+# Expose application port
+EXPOSE 8989
+
+# Copy application from external build
+COPY entrypoint_nbdkit.sh /entrypoint_nbdkit.sh
+COPY run_test.sh /run_test.sh
+ENTRYPOINT ["bash", "/entrypoint_nbdkit.sh"]
