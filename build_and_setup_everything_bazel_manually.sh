@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set +e
+
 . ./kind_with_registry.sh
 
 ./get_forklift_bazel.sh
