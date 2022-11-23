@@ -23,7 +23,8 @@ jobs:
       - name: Checkout forklift
         uses: actions/checkout@v3
         with:
-          repository: kubev2v/forklift
+          repository: eslutsky/forklift
+          ref: remove-kvm-req
           path: forklift
 
       - name: Bazel cache
@@ -47,7 +48,7 @@ jobs:
     
       - run: sleep 240
 
-      - run: kubectl get pods -n konveyor-forklift
+      - run: kubectl get pods -A
       
       - run: kubectl get providers -n konveyor-forklift -o yaml
 
