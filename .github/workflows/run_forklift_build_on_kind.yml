@@ -45,7 +45,7 @@ jobs:
       
       - run: gcc --version
       
-      - run: bazel clean --expunge
+      - run: cd forklift/ && bazel clean --expunge
       
       - run: build_and_setup_everything_bazel.sh
 
