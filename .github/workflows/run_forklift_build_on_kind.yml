@@ -41,6 +41,8 @@ jobs:
       
       - run: sudo apt-get install -y build-essential nbdkit-plugin-dev gcc-11
       
+      - run: echo "common --nostrict_system_includes" >>forklift/.bazelrc
+      
       - run: gcc --version
       
       - run: build_and_setup_everything_bazel.sh
