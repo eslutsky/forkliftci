@@ -3,14 +3,14 @@ echo "Running $0"
 
 set +e
 
+SCRIPT_PATH=`realpath "$0"`
+SCRIPT_DIR=`dirname "$SCRIPT_PATH"`
+
 # Change the dir to FORKLIFT_DIR (default forklift)
 cd ${FORKLIFT_DIR:-forklift}
 
 # verify there is WORKSPACE file
-[ ! -e WORSKPACE ] && (echo "this script must run inside a forklift repo" ; exit 2)
-
-# Copy the stub-images under the bazel workspace
-cp -fr ../stub-images .
+[ ! -e WORKSPACE ] && { echo "this script must run inside a forklift repo" ; exit 2; }
 
 export REGISTRY=localhost:5001
 export REGISTRY_TAG=latest
@@ -21,5 +21,10 @@ bazel run push-forklift-validation
 bazel run push-forklift-operator
 bazel run push-forklift-operator-bundle --action_env CONTROLLER_IMAGE=${REGISTRY}/forklift-controller:${REGISTRY_TAG} --action_env VALIDATION_IMAGE=${REGISTRY}/forklift-validation:${REGISTRY_TAG} --action_env OPERATOR_IMAGE=${REGISTRY}/forklift-operator:${REGISTRY_TAG} --action_env VIRT_V2V_IMAGE=${REGISTRY}/forklift-virt-v2v-stub:${REGISTRY_TAG}
 bazel run push-forklift-operator-index --action_env REGISTRY=${REGISTRY} --action_env REGISTRY_TAG=${REGISTRY_TAG} --action_env OPM_OPTS="--use-http"
+
+[ ! -e "${SCRIPT_DIR}/stub-images" ] && { echo "stub-images not found";exit 2; }
+
+# Copy the stub-images under the bazel workspace
+cp -fr ${SCRIPT_DIR}/stub-images .
 bazel run //stub-images:push-vddk-test-vmdk
 bazel run //stub-images:push-forklift-virt-v2v-stub
