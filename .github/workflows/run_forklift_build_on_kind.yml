@@ -45,6 +45,8 @@ jobs:
       
       - run: gcc --version
       
+      - run: bazel clean --expunge
+      
       - run: build_and_setup_everything_bazel.sh
 
       - run: kubectl version
@@ -52,11 +54,11 @@ jobs:
       - run: kubectl wait deployment -n konveyor-forklift forklift-controller --for condition=Available=True --timeout=180s
 
       - run: kubectl describe nodes
-    
+
       - run: sleep 240
 
       - run: kubectl get pods -A
-      
+
       - run: kubectl get providers -n konveyor-forklift -o yaml
 
       - run: kubectl get migrations -n konveyor-forklift -o yaml
