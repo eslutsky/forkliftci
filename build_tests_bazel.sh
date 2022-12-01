@@ -19,5 +19,6 @@ cd ${FORKLIFT_DIR:-forklift}
 
 # Copy the stub-images under the bazel workspace
 cp -fr ${SCRIPT_DIR}/stub-images .
-bazel run //stub-images:push-vddk-test-vmdk
 bazel run //stub-images:push-forklift-virt-v2v-stub
+bazel run //stub-images:push-vddk-test-vmdk
+
