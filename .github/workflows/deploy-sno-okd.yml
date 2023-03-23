@@ -1,0 +1,43 @@
+name: Deploy OKD 
+
+on:
+  workflow_dispatch:
+         
+  schedule:
+    # Runs "at minute 55 past every hour" (see https://crontab.guru)
+    - cron: '30 * * * *'
+jobs:
+  build:
+    name: Trigger Site Rebuild
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out forkliftci repository
+        uses: actions/checkout@v3
+
+      - name: Add cwd to path for kubectl.
+        run: echo `pwd` >> $GITHUB_PATH
+
+      - name: Checkout forklift
+        uses: actions/checkout@v3
+        with:
+          repository: kubev2v/forklift
+          path: forklift
+          
+      - name: Build and push images to quay.io
+        run: |
+          cd ${GITHUB_WORKSPACE}/cluster/okd-on-ovirt/
+
+          source ./cluster/okd-on-ovirt/utils.sh
+
+          # deploy okd on ovirt using ansible
+          run_docker_ansible_deploy
+
+          # get kubeconfig..
+          deploy_csi_nfs
+
+          # deploy hyperconverged operator
+          k8s_apply_hco
+
+          # deploy latest forklift operator using subscription
+          k8s_apply_forklift_latest
+
